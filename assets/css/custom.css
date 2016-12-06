@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'Hipster Script Pro';
+  src: url('../fonts/Hipster-Script-Pro.otf') format("opentype");
+}
+
+/* ----------------------------------------------------
+  ADD YOUR CUSTOM STYLES HERE
+.menu-wrapper.affix-top .navbar-brand { background: url('../images/addlogo.png') no-repeat; width: 172px; margin-top: 15px; }
+.menu-wrapper.affix .navbar-brand { background: url('../images/ddlogo.png') no-repeat; width: 172px; margin-top: 15px; }
+------------------------------------------------------- */
+.menu-wrapper .navbar-brand { margin-top: 15px; font-family: 'Hipster Script Pro'; font-size: 40px; }
+.menu-wrapper.affix .navbar-brand { color: #ffffff; }
+.menu-wrapper.affix-top .navbar-brand { color: #16E689; }
+
+.stat-count{ color: #fff; }
+.imgwel { text-align: center; }
+.imgwel img{ max-width: 350px; max-height: 173px; }
+
+.panel {
+  border: 0;
+  border-radius: 2px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  position: relative;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.panel-profile{
+  box-shadow: 0px 0px 2px grey;
+}
+.panel-profile:hover{
+	box-shadow: 0px 0px 6px grey;
+}
+.panel-heading {
+  margin-bottom: 0;
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
+}
+.panel-default .panel-heading,
+.panel-primary .panel-heading,
+.panel-success .panel-heading,
+.panel-warning .panel-heading,
+.panel-danger .panel-heading,
+.panel-info .panel-heading,
+.panel-inverse .panel-heading {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 0;
+}
+.panel-profile.grid-view .info-group p.desc {
+    min-height: 100px;
+}

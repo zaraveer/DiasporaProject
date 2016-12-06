@@ -1,0 +1,28 @@
+[29-Oct-2016 03:41:17 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home/u1967808/public_html/application/controllers/Apaitu.php on line 55
+[29-Oct-2016 03:42:04 UTC] PHP Parse error:  syntax error, unexpected '?>', expecting function (T_FUNCTION) in /home/u1967808/public_html/application/controllers/Apaitu.php on line 55
+[29-Oct-2016 10:07:44 UTC] PHP Parse error:  syntax error, unexpected 'p' (T_STRING) in /home/u1967808/public_html/application/controllers/Apaitu.php on line 22
+[30-Oct-2016 02:02:33 UTC] PHP Fatal error:  Class 'Facebook' not found in /home/u1967808/public_html/application/controllers/Login.php on line 45
+[30-Oct-2016 13:42:14 UTC] PHP Fatal error:  Class 'Phar' not found in /opt/cpanel/composer/bin/composer on line 23
+[30-Oct-2016 13:51:05 UTC] PHP Fatal error:  Class 'Phar' not found in /opt/cpanel/composer/bin/composer on line 23
+[30-Oct-2016 13:51:08 UTC] PHP Fatal error:  Class 'Phar' not found in /opt/cpanel/composer/bin/composer on line 23
+[30-Oct-2016 13:51:16 UTC] PHP Fatal error:  Class 'Phar' not found in /opt/cpanel/composer/bin/composer on line 23
+[30-Oct-2016 14:09:49 UTC] PHP Fatal error:  Class 'Facebook\Facebook' not found in /home/u1967808/public_html/application/controllers/Login.php on line 31
+[30-Oct-2016 14:09:59 UTC] PHP Fatal error:  Class 'Facebook' not found in /home/u1967808/public_html/application/controllers/Login.php on line 31
+[30-Oct-2016 14:10:48 UTC] PHP Fatal error:  Class 'Facebook' not found in /home/u1967808/public_html/application/controllers/Login.php on line 32
+[30-Oct-2016 14:10:49 UTC] PHP Fatal error:  Class 'Facebook' not found in /home/u1967808/public_html/application/controllers/Login.php on line 32
+[30-Oct-2016 14:11:46 UTC] PHP Notice:  Undefined index: log_path in /home/u1967808/public_html/system/core/Log.php on line 118
+[30-Oct-2016 14:11:46 UTC] PHP Warning:  mkdir(): Invalid path in /home/u1967808/public_html/system/core/Log.php on line 122
+[30-Oct-2016 14:11:46 UTC] PHP Notice:  Undefined index: log_threshold in /home/u1967808/public_html/system/core/Log.php on line 129
+[30-Oct-2016 14:11:46 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/u1967808/public_html/application/vendor/autoload.php' (include_path='.:/opt/alt/php55/usr/share/pear:/opt/alt/php55/usr/share/php') in /home/u1967808/public_html/application/config/config.php on line 145
+[30-Oct-2016 14:11:54 UTC] PHP Notice:  Undefined index: log_path in /home/u1967808/public_html/system/core/Log.php on line 118
+[30-Oct-2016 14:11:54 UTC] PHP Warning:  mkdir(): Invalid path in /home/u1967808/public_html/system/core/Log.php on line 122
+[30-Oct-2016 14:11:54 UTC] PHP Notice:  Undefined index: log_threshold in /home/u1967808/public_html/system/core/Log.php on line 129
+[30-Oct-2016 14:11:54 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/u1967808/public_html/application/vendor/autoload.php' (include_path='.:/opt/alt/php55/usr/share/pear:/opt/alt/php55/usr/share/php') in /home/u1967808/public_html/application/config/config.php on line 145
+[30-Oct-2016 14:17:38 UTC] PHP Fatal error:  Class 'Facebook' not found in /home/u1967808/public_html/application/controllers/Login.php on line 32
+[30-Oct-2016 14:20:26 UTC] PHP Fatal error:  Class 'Facebook' not found in /home/u1967808/public_html/application/controllers/Login.php on line 32
+[30-Oct-2016 14:34:16 UTC] PHP Fatal error:  Class 'Facebook\Facebook' not found in /home/u1967808/public_html/application/libraries/Facebook.php on line 56
+[30-Oct-2016 14:35:21 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 130968 bytes) in /home/u1967808/public_html/system/core/Config.php on line 670
+[30-Oct-2016 14:35:24 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 130968 bytes) in /home/u1967808/public_html/system/core/Config.php on line 670
+[30-Oct-2016 14:35:27 UTC] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 130968 bytes) in /home/u1967808/public_html/system/core/Config.php on line 670
+[30-Oct-2016 15:21:10 UTC] PHP Fatal error:  Class 'Facebook' not found in /home/u1967808/public_html/application/controllers/Login.php on line 45
+[30-Oct-2016 15:21:20 UTC] PHP Fatal error:  Class 'Facebook' not found in /home/u1967808/public_html/application/controllers/Login.php on line 45
