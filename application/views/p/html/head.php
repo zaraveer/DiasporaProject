@@ -31,6 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   
   <link rel="stylesheet" href="<?= base_url('assets/dashboard'); ?>/css/quirk.css">
   <link rel="stylesheet" href="<?= base_url('assets/dashboard'); ?>/css/custom-login.css">
+  <link rel="stylesheet" href="<?= base_url('assets/dashboard'); ?>/css/custom.css">
   
   <script src="<?= base_url('assets/dashboard'); ?>/lib/modernizr/modernizr.js"></script>
   <script src="<?= base_url('assets/dashboard'); ?>/js/prefixfree.min.js"></script>

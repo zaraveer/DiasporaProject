@@ -30,7 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -92,107 +92,115 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
         </div>
 
-        <header id="home" class="header">
-        	<div class="headerpanel">
-
-		<div class="logopanel">
-		  <h2><a class="navbar-brand" href="http://sahabatdiaspora.com/">Diaspora Project</a></h2>
-		</div><!-- logopanel -->
-    		<div class="headerbar">
-		
-	        <!--a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a-->
-	  	<div class="header-right">
-        	<ul class="headermenu">
-	         
-	          <?php if(!$lgn){ ?>
-				<li><a data-scroll href="<?= base_url(''); ?>register">Daftar</a></li>
-                                <li><a data-scroll href="<?= base_url(''); ?>login">Masuk</a></li>
-								<?php }else{ ?>
-								<li><a href="<?= base_url('dashboard') ?>">Dashboard</a></li>
-                                <li><a href="<?= base_url('/auth/logout') ?>">Logout</a></li>
-								<?php } ?>
-                                <li><a data-scroll href="<?= base_url(''); ?>project/all">Daftar Proyek</a></li>
-                                <li>
-                                    <div class="social-icons">
-                                        <span><a class="border-radius" data-rel="tooltip" data-toggle="tooltip" data-trigger="hover" data-placement="bottom" data-title="Facebook" href="#"><i class="fa fa-facebook"></i></a></span>
-                                        <span><a class="border-radius" data-rel="tooltip" data-toggle="tooltip" data-trigger="hover" data-placement="bottom" data-title="Twitter" href="#"><i class="fa fa-twitter"></i></a></span>
-                                        <span><a titl
-                                        e="Search" href="#" class="nav-toggle border-radius" data-toggle="collapse" data-target="#opensearch"><i class="fa fa-search"></i></a></span>
-                                    </div><!-- end social icons -->
-                                </li>
-	        </ul>
-      		</div><!-- header-right -->
-	        </div><!-- headerbar -->
-  	</div><!-- header-->
-        	
-        </header><!-- end header -->
-        
-		<article class="slider-wrapper">
-            <div class="tp-banner-container">
-                <div class="tp-banner" >
-                    <ul>
-                        <li data-transition="fade" data-slotamount="1" data-masterspeed="1500" data-thumb="<?= base_url('assets/images') ?>/slider_19.jpg" data-delay="13000"  data-saveperformance="off"  data-title="Our Workplace">
-                            <!-- MAIN IMAGE -->
-                            <img src="<?= base_url('assets/images') ?>/slider_19.jpg"  alt="kenburns1"  data-bgposition="left center" data-kenburns="on" data-duration="14000" data-ease="Linear.easeNone" data-bgfit="100" data-bgfitend="130" data-bgpositionend="right center">
-
-                            <div class="tp-caption slider_03 skewfromright randomrotateout tp-resizeme rs-parallaxlevel-2"
-                                data-x="center"
-                                data-y="center" 
-                                data-speed="1000"
-                                data-start="1200"
-                                data-easing="Power3.easeInOut"
-                                data-splitin="none"
-                                data-splitout="none"
-                                data-elementdelay="0.1"
-                                data-endelementdelay="0.1"
-                                data-endspeed="1000"
-                                style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">Welcome to Diaspora
-                            </div>
-                        </li>
-                       <!--  
-                        <!--li data-transition="fade" data-slotamount="1" data-masterspeed="1500" data-thumb="<?= base_url('assets/images') ?>/apaitudiaspora.png" data-delay="13000"  data-saveperformance="off"  data-title="Our Workplace"-->
-                            <!-- MAIN IMAGE -->
-                            <!--img src="<?= base_url('assets/images') ?>/apaitudiaspora.png"  alt="kenburns1"  data-bgposition="left center" data-kenburns="on" data-duration="14000" data-ease="Linear.easeNone" data-bgfit="100" data-bgfitend="130" data-bgpositionend="right center"-->
-
-                            <div class="tp-caption slider_03 skewfromright randomrotateout tp-resizeme rs-parallaxlevel-2"
-                                data-x="center"
-                                data-y="center" 
-                                data-speed="1000"
-                                data-start="1200"
-                                data-easing="Power3.easeInOut"
-                                data-splitin="none"
-                                data-splitout="none"
-                                data-elementdelay="0.1"
-                                data-endelementdelay="0.1"
-                                data-endspeed="1000"
-                                style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">No limits for creativity
-                            </div>
-                        </li>
-                        -->
-                        <!--
-                        <li data-transition="fade" data-slotamount="1" data-masterspeed="1500" data-thumb="<?= base_url('assets/images') ?>/apaitudiaspora.png" data-delay="13000"  data-saveperformance="off"  data-title="Our Workplace">
-                            <!-- MAIN IMAGE -->
-                            <img src="<?= base_url('assets/images') ?>/slider_19.jpg"  alt="kenburns1"  data-bgposition="left center" data-kenburns="on" data-duration="14000" data-ease="Linear.easeNone" data-bgfit="100" data-bgfitend="130" data-bgpositionend="right center">
-
-                            <div class="tp-caption slider_03 skewfromright randomrotateout tp-resizeme rs-parallaxlevel-2"
-                                data-x="center"
-                                data-y="center" 
-                                data-speed="1000"
-                                data-start="1200"
-                                data-easing="Power3.easeInOut"
-                                data-splitin="none"
-                                data-splitout="none"
-                                data-elementdelay="0.1"
-                                data-endelementdelay="0.1"
-                                data-endspeed="1000"
-                                style="z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;">Diaspora Stand out from crowd
-                            </div>
-                        </li>
-                        -->
-                    </ul>   
+        <header>
+            <div class="header-menu">
+                <div class="header-inner">
+                    <div class="left-menu">
+                        <a class="item-menu hidden-xs" href="#"><i class="fa fa-facebook"></i></a>
+                        <a class="item-menu hidden-xs" href="#"><i class="fa fa-twitter"></i></a>
+                        <a class="item-menu" href="#"><i class="fa fa-search"></i></a>
+                    </div>
+                    <div class="right-menu">
+                        <?php if(!$lgn){ ?>
+                        <a class="item-menu" href="<?= base_url(''); ?>register">Daftar</a>
+                        <a class="item-menu" href="<?= base_url(''); ?>login">Masuk</a>
+                        <?php } else {?>
+                        <a class="item-menu" href="<?= base_url('dashboard') ?>">Dashboard</a>
+                        <a class="item-menu" href="<?= base_url('/auth/logout') ?>">Logout</a>
+                        <?php } ?>
+                        <a class="item-menu" href="<?= base_url(''); ?>project/all"><span class="hidden-xs">Daftar</span> Proyek</a>
+                    </div>
                 </div>
             </div>
-        </article>
+            <div class="header-help">
+                <div class="header-inner">
+                    <div class="left-menu">
+                        <a class="header-brand" href="http://sahabatdiaspora.com/">
+                            <h3>SAHABAT</h3>
+                            <h4>DIASPORA</h5>
+                        </a>
+                    </div>
+                    <div class="right-menu">
+                        <div class="header-block hidden-sm hidden-xs">
+                            <div class="icon"><img src="<?= base_url('assets/flags')?>/sk.png" /></div>
+                            <div class="desc">
+                                <div class="country">Korea Selatan</div>
+                                <div class="address">
+                                    서울특별시 강남구 역삼로17길 60, 3층 316-7호 (역삼동)
+                                </div>
+                                <div class="phone">+8210 59525 2349</div>
+                            </div>
+                        </div>
+                        <div class="header-block hidden-sm hidden-xs">
+                            <div class="icon"><img src="<?= base_url('assets/flags') ?>/ina.png" /></div>
+                            <div class="desc">
+                                <div class="country">Indonesia</div>
+                                <div class="address">
+                                    Jl. HR Rasuna Said, Karet Kuningan, Setiabudi Jakarta Selatan 12940
+                                </div>
+                                <div class="phone">+6221 37530629</div>
+                            </div>
+                        </div>
+                        <div class="header-block">
+                            <div class="btn btn-donasi">DONASI <span class="hidden-xs">SEKARANG</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+		<div class="banner">
+            <?php 
+                $item_banner = $results[0];
+            ?>
+            <div class="banner-item" 
+                style="background-image:url('<?= base_url('');?>assets/photos/<?= $item_banner->projectphoto;?>')">
+                <div class="banner-box">
+                    <div class="time">
+                    <?php 
+                        $to = explode('/',$item_banner->dateto);
+                        $dateto = $to[2]."-".$to[0]."-".$to[1];
+                        
+                        $date=strtotime($dateto);//Converted to a PHP date (a second count)
+
+                        $diff=$date-time();//time returns current time in seconds
+                        $days=floor($diff/(60*60*24));//seconds/minute*minutes/hour*hours/day);
+                        
+                        if($days <= 0){ 
+                            echo "$days hari";
+                        }else{
+                            echo "$days hari";
+                        }
+                    ?>
+                    </div>
+                    <div class="title"><?=htmlspecialchars($item_banner->name_project)?></div>
+                    <div class="desc"><?=htmlspecialchars($item_banner->summary)?></div>
+                    <div class="raise">
+                        <span class="label">Terkumpul</span>
+                        <span class="value">
+                            <?php 
+                                $i = 0;
+                                foreach($money as $m){ 
+                                    if($item_banner->id_project == $m->id_project){
+                                        $i = $i + $m->value;
+                                    } 
+                                } 
+                                echo htmlspecialchars(number_format($i, 0 , ",", "."),ENT_QUOTES,'UTF-8');
+                            ?>
+                        </span>
+                    </div>
+                    <div class="goal">
+                        <span class="label">Target</span>
+                        <span class="value">
+                            <?= htmlspecialchars(number_format($item_banner->cost, 0 , ",", ".")) ?>
+                        </span>
+                    </div>
+                    <div class="action">
+                        <a href="#" class="btn">Donasi</a>
+                    </div>
+                </div>
+            </div>      
+        </div>
 
         <div class="container">
                 <div class="section-wrapper">

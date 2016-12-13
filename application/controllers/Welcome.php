@@ -41,7 +41,7 @@ class Welcome extends CI_Controller {
 		$this->data['lgn'] = $this->ion_auth->logged_in();
 		
 		$this->load->view('p/html/head');
-		$this->load->view('p/html/header');
+		//$this->load->view('p/html/header');
 		/*for view homepage*/
 		$this->load->view('welcome_message', $this->data);
 	}

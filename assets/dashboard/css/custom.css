@@ -1,0 +1,214 @@
+header{
+	width: 100%;
+}
+.header-help{
+	background-color: #fff;
+	height: 75px;
+    padding: 5px 0px;
+}
+.header-menu{
+	background-color: #16E689;
+	height: 50px;
+}
+.header-inner{
+	max-width: 1200px;
+	margin: auto;
+}
+.left-menu{
+	float: left;
+}
+.right-menu{
+	float: right;
+}
+.item-menu{
+	color: rgba(255, 255, 255, .8) !important;
+    height: 50px;
+    min-width: 50px;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none !important;
+    cursor: pointer;
+    padding: 0px 10px;
+}
+.item-menu .fa{
+	font-size: 20px;
+	line-height: 50px;
+}
+.item-menu:hover{
+	background: #fff;
+	color: #16E689 !important;
+}
+.header-brand{
+	display: inline-block;
+	padding: 0px 10px; 
+}
+.header-brand h3{
+	margin: 0px;
+	font-weight: bold;
+}
+.header-brand h4{
+	margin: 0;
+	margin-top: -10px;
+	letter-spacing: 5px
+}
+.header-block{
+    display: inline-block;
+    float: left;
+    padding: 5px 10px;
+    max-width: 260px;
+}
+.header-block .icon{
+	width: 50px;
+    display: inline;
+    height: 60px;
+    float: left;
+    margin-right: 10px;
+}
+.header-block .icon img{
+    width: 100%;
+    height: auto;
+    margin: 13px 0px;
+    border: solid 1px #ccc;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+.header-block .icon img:hover{
+	-webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
+.header-block .desc{
+    display: inline;
+}
+.header-block .desc .country{
+    max-height: 15px;
+    font-weight: bold;
+    font-size: 11px;
+}
+.header-block .desc .address{
+	max-height: 30px;
+    font-size: 10px;
+    color: #999;
+}
+.header-block .desc .phone{
+	max-height: 15px;
+    font-size: 10px;
+    font-weight: bold;
+    color: #999;
+}
+.header-block .btn-donasi{
+ 	border: solid 3px #16E689;
+    letter-spacing: 3px;
+    margin: 11px;
+}
+.header-block .btn-donasi:hover{
+	background: #16E689;
+	color: #fff;
+}
+
+.banner{
+	width: 100%;
+	height: 60vh;
+}
+.banner-item{
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-color: grey;
+}
+.banner-item .banner-box{
+    width: 300px;
+    background: #fff;
+    margin: 90px;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 5px;
+}
+@media screen and (max-width: 468px){
+	.banner-item .banner-box{
+		width: 80% !important;
+		margin: 10% !important;
+	}
+}
+.banner-item .banner-box .time{
+    text-align: right;
+    display: inline;
+    font-size: 11px;
+    color: #fff;
+    background: #666;
+    padding: 3px;
+    border-radius: 3px;
+}
+.banner-item .banner-box .title{
+	font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0px;
+    color: #666;
+}
+.banner-item .banner-box .desc{
+	color: #999;
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    border-bottom: solid 1px #dedede;
+    padding-bottom: 20px;
+}
+.banner-item .banner-box .raise{
+    width: 50%;
+    float: left;
+    border-right: solid 1px #ededed;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+.banner-item .banner-box .raise .label{
+    color: #999 !important;
+    padding: 0px !important;
+    display: block !important;
+    text-align: left !important;
+    margin-bottom: 5px;
+}
+.banner-item .banner-box .raise .value{
+    color: #16E689;
+    font-weight: bold;
+    font-size: 20px;
+}
+.banner-item .banner-box .goal{
+	width: 50%;
+    float: right;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+.banner-item .banner-box .goal .label{
+	color: #999 !important;
+    padding: 0px !important;
+    display: block !important;
+    text-align: left !important;
+    margin-bottom: 5px;
+}
+.banner-item .banner-box .goal .value{
+    font-size: 20px;
+    font-weight: bold;
+}
+.banner-item .banner-box .action{
+    float: left;
+    width: 100%;
+    text-align: center;
+    border-top: solid 1px #ededed;
+}
+.banner-item .banner-box .action .btn{
+    margin-top: 20px;
+    background: #16E689;
+    padding: 5px 30px;
+    border-radius: 3px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
