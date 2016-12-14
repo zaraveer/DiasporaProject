@@ -94,7 +94,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <header>
             <div class="header-menu">
-                <div class="header-inner">
+                <div class="container">
                     <div class="left-menu">
                         <a class="item-menu hidden-xs" href="#"><i class="fa fa-facebook"></i></a>
                         <a class="item-menu hidden-xs" href="#"><i class="fa fa-twitter"></i></a>
@@ -113,7 +113,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
             </div>
             <div class="header-help">
-                <div class="header-inner">
+                <div class="container">
                     <div class="left-menu">
                         <a class="header-brand" href="http://sahabatdiaspora.com/">
                             <h3>SAHABAT</h3>
@@ -142,7 +142,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </div>
                         </div>
                         <div class="header-block">
-                            <div class="btn btn-donasi">DONASI <span class="hidden-xs">SEKARANG</span></div>
+                            <a href="<?= base_url(''); ?>project/all" class="btn btn-donasi">DONASI <span class="hidden-xs">SEKARANG</span></a>
                         </div>
                     </div>
                 </div>
@@ -201,163 +201,119 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
             </div>      
         </div>
-
-        <div class="container">
-                <div class="section-wrapper">
-                    <div class="row">
-                        <div class="col-lg-2-4 col-md-2-4 col-sm-6 col-xs-12">
-
-                        </div><!-- end col -->
-                        <div class="col-lg-2-4 col-md-2-4 col-sm-6 col-xs-12">
-                            <div class="btn-toolbar" style="text-align: center;">
-                                <?php if(!$lgn){ ?>
-                                <a href="<?= base_url(''); ?>register" class="btn btn-success btn-quirk" style="font-size:26px; padding:6px 20px;">Mulai Proyek</a>
-                                <?php } else { ?>
-                                <a href="<?= base_url(''); ?>project/form" class="btn btn-success btn-quirk" style="font-size:26px; padding:6px 20px;">Mulai Proyek</a>
-                                <?php } ?>
-                            </div>
-                        </div><!-- end col -->
-                        <div class="col-lg-2-4 col-md-2-4 col-sm-6 col-xs-12">
-                        </div><!-- end col -->
-                        <div class="col-lg-2-4 col-md-2-4 col-sm-6 col-xs-12">
-                            <div class="btn-toolbar" style="text-align: center;">
-                                <a href="<?= base_url(''); ?>project/all" class="btn btn-success btn-quirk" style="font-size:26px; padding:6px 20px;">Donasi</a>
-                            </div>
-                        </div><!-- end col -->
-                        <div class="col-lg-2-4 col-md-2-4 col-sm-6 col-xs-12">
-
-                        </div><!-- end col -->
-                    </div><!-- end row -->
-                </div><!-- end section-wrapper -->
-            </div><!-- end container -->
 		
         <section id="about" class="section-w clearfix">
             <div class="container">
                 <div class="section-title text-center">
-                    <h3><span class="font-backend">D</span>DIASPORA PROJECT</h3>
+                    <h3><b>DIASPORA PROJECT</b></h3>
                     <p class="lead">Platform Ruang Berkolaborasi Sesama Diaspora</p>
-                </div><!-- end sectiontitle -->
+                </div>
 
                 <div class="section-wrapper">
                     <div class="row">
-                        <div class="col-lg-2-4 col-md-2-4 col-sm-6 col-xs-12">
-                            <div class="service-box text-center">
-                                <span class="fun-icon border-radius"><i class="fa fa-send"></i></span>
-                                <p>Klik "Mulai Proyek"</p>
-                            </div><!-- end service-box -->
-                        </div><!-- end col -->
-                        <div class="col-lg-2-4 col-md-2-4 col-sm-6 col-xs-12">
-                            <div class="service-box text-center">
-                                <span class="fun-icon border-radius"><i class="fa fa-edit"></i></span>
-                                <p>Deskripsikan Proyek Kamu</p>
-                            </div><!-- end service-box -->
-                        </div><!-- end col -->
-                        <div class="col-lg-2-4 col-md-2-4 col-sm-6 col-xs-12">
-                            <div class="service-box text-center">
-                                <span class="fun-icon border-radius"><i class="fa fa-child"></i></span>
-                                <p>Sebarkan link proyek kamu ke diaspora lainnya</p>
-                            </div><!-- end service-box -->
-                        </div><!-- end col -->
-						<div class="col-lg-2-4 col-md-2-4 col-sm-6 col-xs-12">
-                            <div class="service-box text-center">
-                                <span class="fun-icon border-radius"><i class="fa fa-group"></i></span>
-                                <p>Diaspora bergabung dan berdonasi</p>
-                            </div><!-- end service-box -->
-                        </div><!-- end col -->
-						<div class="col-lg-2-4 col-md-2-4 col-sm-6 col-xs-12">
-                            <div class="service-box text-center">
-                                <span class="fun-icon border-radius"><i class="fa fa-road"></i></span>
-                                <p>Jalankan proyekmu!</p>
-                            </div><!-- end service-box -->
-                        </div><!-- end col -->
-                    </div><!-- end row -->
-                </div><!-- end section-wrapper -->
-            </div><!-- end container -->
-        </section><!-- end section -->
+                        <div class="col-lg-2-4 col-md-2-4 col-sm-6 col-xs-12 sd-icon">
+                            <img class="img-responsive" src="<?= base_url('assets/images')?>/sd-icon-click.png"/>
+                            <p class="col-xs-12">Klik "Mulai Proyek"</p>
+                        </div>
+                        <div class="col-lg-2-4 col-md-2-4 col-sm-6 col-xs-12 sd-icon">
+                            <img class="img-responsive" src="<?= base_url('assets/images')?>/sd-icon-describe.png"/>
+                            <p>Deskripsikan Proyek Kamu</p>
+                        </div>
+                        <div class="col-lg-2-4 col-md-2-4 col-sm-6 col-xs-12 sd-icon">
+                            <img class="img-responsive" src="<?= base_url('assets/images')?>/sd-icon-share.png"/>
+                            <p>Sebarkan link proyek kamu ke diaspora lainnya</p>
+                        </div>
+                        <div class="col-lg-2-4 col-md-2-4 col-sm-6 col-xs-12 sd-icon">
+                            <img class="img-responsive" src="<?= base_url('assets/images')?>/sd-icon-join.png"/>
+                            <p>Diaspora bergabung dan berdonasi</p>
+                        </div>
+                        <div class="col-lg-2-4 col-md-2-4 col-sm-6 col-xs-12 sd-icon">
+                            <img class="img-responsive" src="<?= base_url('assets/images')?>/sd-icon-project.png"/>
+                            <p>Jalankan proyekmu!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>        
 
         <section id="works" class="section-g clearfix">
             <div class="container">
                 <div class="section-title text-center">
-                    <h3><span class="font-backend">P</span> Proyek Terbaru</h3>
-                </div><!-- end sectiontitle -->
-            </div><!-- end container -->
-            <div id="second" class="bf fullwidth row">
-				<div class="container">
-				<div style="display:block; overflow:auto;">
-                <?php foreach($results as $res): ?>
-				  <div class="col-md-4 col-lg-4">
-					<div class="panel panel-profile grid-view">
-					  <div class="panel-heading">
-						<div class="text-center">
-						  <h4 class="panel-profile-name">
-							<?php $s_id = str_pad( $res->id, 8, "0", STR_PAD_LEFT ); ?>
-							<a href="<?= base_url(''); ?>project/details/<?= $res->slug; ?>/<?= $s_id; ?>">
-								<?php echo htmlspecialchars($res->name_project,ENT_QUOTES,'UTF-8');?>
-							</a>
-						  </h4>
-						 
-										<i class="glyphicon glyphicon-user"></i>
-										<?php $p_id = str_pad( $res->id_user, 8, "0", STR_PAD_LEFT ); ?>
-										oleh <a href="<?= base_url(''); ?>profile/details/<?= $p_id; ?>">
-											<?php echo htmlspecialchars($res->username,ENT_QUOTES,'UTF-8');?>
-										</a>
-						</div>
-					  </div><!-- panel-heading -->
-					  <div class="imgwel">
-						<?php if($res->projectphoto == NULL ){ ?>
-							<img src="<?= base_url(''); ?>assets/images/default-img-placeholder.png" style="width:100%;"/>
-						<?php }else{ ?>
-							<img src="<?= base_url(''); ?>assets/photos/<?= $res->projectphoto; ?>"/>
-						<?php } ?>
-					  </div>
-					  <div class="panel-body people-info">
+                    <h3><b>PROJECT TERBARU</b></h3>
+                </div>
 
-						<div class="info-group">
-						  <label>Kategori</label>
-						  <?php echo htmlspecialchars($res->name_category,ENT_QUOTES,'UTF-8');?>
-						</div>
-						<div class="info-group">
-						  <label>Lokasi</label>
-						  <?php echo htmlspecialchars($res->name_province,ENT_QUOTES,'UTF-8');?>
-						</div>
-						<div class="info-group">
-						  <label>Description</label>
-						  <p class="desc"><?php 
+                <?php foreach($results as $res): ?>
+                <div class="col-md-4 col-lg-4">
+                    <div class="panel panel-profile grid-view">
+                        <div class="panel-heading">
+                            <div class="text-center">
+                            <h4 class="panel-profile-name">
+                                <?php $s_id = str_pad( $res->id, 8, "0", STR_PAD_LEFT ); ?>
+                                <a href="<?= base_url(''); ?>project/details/<?= $res->slug; ?>/<?= $s_id; ?>">
+                                <?php echo htmlspecialchars($res->name_project,ENT_QUOTES,'UTF-8');?>
+                                </a>
+                            </h4>                         
+                            <i class="glyphicon glyphicon-user"></i>
+                            <?php $p_id = str_pad( $res->id_user, 8, "0", STR_PAD_LEFT ); ?>
+                            oleh <a href="<?= base_url(''); ?>profile/details/<?= $p_id; ?>">
+                                <?php echo htmlspecialchars($res->username,ENT_QUOTES,'UTF-8');?>
+                            </a>
+                        </div>
+                      </div>
+                      <div class="imgwel">
+                        <?php if($res->projectphoto == NULL ){ ?>
+                            <img src="<?= base_url(''); ?>assets/images/default-img-placeholder.png" style="width:100%;"/>
+                        <?php }else{ ?>
+                            <img src="<?= base_url(''); ?>assets/photos/<?= $res->projectphoto; ?>"/>
+                        <?php } ?>
+                      </div>
+                      <div class="panel-body people-info">
+                        <div class="info-group">
+                          <label>Kategori</label>
+                          <?php echo htmlspecialchars($res->name_category,ENT_QUOTES,'UTF-8');?>
+                        </div>
+                        <div class="info-group">
+                          <label>Lokasi</label>
+                          <?php echo htmlspecialchars($res->name_province,ENT_QUOTES,'UTF-8');?>
+                        </div>
+                        <div class="info-group">
+                          <label>Description</label>
+                          <p class="desc"><?php 
                             $str = $res->summary;
                             eval("\$str = \"$str\";");
                             echo $str;
-                          ?></p>						
+                          ?></p>                        
                         </div>
-						<div class="row">
-						  <div class="col-xs-6">
-							<div class="info-group">
-							  <label>Biaya</label>
-							  <h4><?php echo htmlspecialchars(number_format($res->cost, 0 , ",", "."),ENT_QUOTES,'UTF-8');?></h4>
-							</div>
-						  </div>
-						  <div class="col-xs-6">
-							<div class="info-group">
-							  <label>Sisa Waktu</label>
-							  <h4>
-								<?php 
-									$to = explode('/',$res->dateto);
-									$dateto = $to[2]."-".$to[0]."-".$to[1];
-									
-									$date=strtotime($dateto);//Converted to a PHP date (a second count)
+                        <div class="row">
+                          <div class="col-xs-6">
+                            <div class="info-group">
+                              <label>Biaya</label>
+                              <h4><?php echo htmlspecialchars(number_format($res->cost, 0 , ",", "."),ENT_QUOTES,'UTF-8');?></h4>
+                            </div>
+                          </div>
+                          <div class="col-xs-6">
+                            <div class="info-group">
+                              <label>Sisa Waktu</label>
+                              <h4>
+                                <?php 
+                                    $to = explode('/',$res->dateto);
+                                    $dateto = $to[2]."-".$to[0]."-".$to[1];
+                                    
+                                    $date=strtotime($dateto);//Converted to a PHP date (a second count)
 
-									$diff=$date-time();//time returns current time in seconds
-									$days=floor($diff/(60*60*24));//seconds/minute*minutes/hour*hours/day);
-									
-									if($days <= 0){ 
-										echo "$days hari";
-									}else{
-										echo "$days hari";
-									}
-								?>
-							  </h4>
-							</div>
-						  </div>
-						</div>
+                                    $diff=$date-time();//time returns current time in seconds
+                                    $days=floor($diff/(60*60*24));//seconds/minute*minutes/hour*hours/day);
+                                    
+                                    if($days <= 0){ 
+                                        echo "$days hari";
+                                    }else{
+                                        echo "$days hari";
+                                    }
+                                ?>
+                              </h4>
+                            </div>
+                          </div>
+                        </div>
 
                         <div class="info-group">
                           <label>Dana Terkumpul</label>
@@ -375,88 +331,100 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </p>
                         </div>
 
-						<div class="info-group last">
-							<?php $i = 0;
-								foreach($money as $m){ 
-									if($res->id_project == $m->id_project){
-										$i = $i + $m->value;
-									} 
-								} 
+                        <div class="info-group last">
+                            <?php $i = 0;
+                                foreach($money as $m){ 
+                                    if($res->id_project == $m->id_project){
+                                        $i = $i + $m->value;
+                                    } 
+                                } 
 
                                 $per = ($i / $res->cost) * 100;
-								$aa = round($per, 1); ?>
-								
-							<label>Proses : <?= $aa; ?>%</label>
-						 
-						 <div class="progress progress-striped">
-							<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<?= $aa; ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php if($aa > 100) { echo "100"; } else{ echo $aa; }  ?>%">
-							  <span class="sr-only">
-							  <?php if($aa > 32){ echo $aa."% Complete"; } ?></span>
-							</div>
-						 </div>
-						  
-						</div>
-					
-					  </div><!-- panel-body -->
-					</div><!-- panel -->
-				  </div><!-- col-md-6 -->
-				<?php endforeach; ?>
-				</div>
-				<div class="btn-toolbar" style="text-align: center;">
-					<a href="<?= base_url(''); ?>project/all" class="btn btn-success btn-quirk" style="font-size:26px; padding:6px 20px;">Daftar Proyek</a>
-				</div>
-				</div><!-- end container -->
+                                $aa = round($per, 1); ?>
+                                
+                            <label>Proses : <?= $aa; ?>%</label>
+                         
+                         <div class="progress progress-striped">
+                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<?= $aa; ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php if($aa > 100) { echo "100"; } else{ echo $aa; }  ?>%">
+                              <span class="sr-only">
+                              <?php if($aa > 32){ echo $aa."% Complete"; } ?></span>
+                            </div>
+                         </div>
+                          
+                        </div>
+                    
+                      </div><!-- panel-body -->
+                    </div><!-- panel -->
+                  </div><!-- col-md-6 -->
+                <?php endforeach; ?>
+                </div>
+                    <center>
+                        <a href="<?= base_url(''); ?>project/all" class="btn btn-success">Lihat proyek lainnya</a>
+                    </center>
+                </div>
             </div>
-        </section><!-- end section white -->
+        </section>
+
+        <section id="clickbait" class="section-w clearfix">
+            <div class="container">
+                <div class="col-lg-10">
+                    Buat project Anda sekarang juga dan berkolaborasi dengan sahabat diaspora lainnya.
+                </div>
+                <div class="col-lg-2">
+                    <?php if(!$lgn){ ?>
+                    <a href="<?= base_url(''); ?>register" class="btn">Mulai Proyek</a>
+                    <?php } else { ?>
+                    <a href="<?= base_url(''); ?>project/form" class="btn">Mulai Proyek</a>
+                    <?php } ?>
+                </div>
+            </div>
+        </section>
         
-        <footer class="footer">
+        <footer>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="widget">
-				<div class="section-title">
-                                <h3>Tentang Kami</h3>
-                          	</div><!-- title -->
-				<ul>
-                                <li><a href="<?= base_url(''); ?>Apaitu">Apa itu Diaspora Project?</a></li>
-                                <li><a href="<?= base_url(''); ?>Carakerja">Cara Kerja</a></li>
-                            	</ul>
-                        </div><!-- end widget -->
-                    </div><!-- end col -->
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <h4><b>Tentang Kami</b></h4>
+                        <ul>
+                            <li><a href="<?= base_url(''); ?>Apaitu">Apa itu Diaspora Project?</a></li>
+                            <li><a href="<?= base_url(''); ?>Carakerja">Cara Kerja</a></li>
+                    	</ul>
+                    </div>
 
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="widget">
-                            <div class="section-title">
-                                <h3>Menggalang Dana</h3>
-                            </div><!-- title -->
-                            <ul>
-                                <li><a href="<?=base_url('')?>register">Buat Project</a></li>
-                                <li><a href="<?=base_url('')?>Syaratketentuan">Syarat dan Ketentuan</a></li>
-                                <li><a href="<?=base_url('')?>Kebijakanprivasi">Kebijakan Privasi</a></li>
-                                <!--li><a href="<?=base_url('')?>Dukungan">Dukungan</a></li-->
-                            </ul>
-                        </div><!-- end widget -->
-                    </div><!-- end col -->
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <h4><b>Menggalang Dana</b></h4>
+                        <ul>
+                            <li><a href="<?=base_url('')?>register">Buat Project</a></li>
+                            <li><a href="<?=base_url('')?>Syaratketentuan">Syarat dan Ketentuan</a></li>
+                            <li><a href="<?=base_url('')?>Kebijakanprivasi">Kebijakan Privasi</a></li>
+                            <!--li><a href="<?=base_url('')?>Dukungan">Dukungan</a></li-->
+                        </ul>
+                    </div>
 
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="widget">
-                            <div class="section-title">
-                                <h3>Kontak Kami</h3>
-                            </div><!-- title -->
-                            <ul>
-                                <li><font color="black" size="4">Yayasan Diaspora Berdaya Bersama</font></li>
-                                <li><b><font color="black">Indonesia</font></b></li>
-                                <li><font color="black">Jl. HR Rasuna Said, Karet Kuningan, Setiabudi Jakarta Selatan 12940</font></li>
-                                <li><font color="black">+6221 37530629</font></li>
-                                <li><b><font color="black">Korea Selatan</font></b></li>
-				<li><font color="black">서울특별시 강남구 역삼로17길 60, 3층 316-7호 (역삼동)</font></li>                                
-                                <li><font color="black">+8210 59525 2349</font></li>
-                            </ul>
-                        </div><!-- end widget -->
-                    </div><!-- end col -->
-                </div><!-- end row -->
-            </div><!-- end container -->
-        </footer><!-- end footer -->
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <h4><b>Kontak Kami</b> (Yayasan Diaspora Berdaya Bersama)</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h6>Indonesia</h6>
+                                <p class="col-xs-12">
+                                    Jl. HR Rasuna Said, Karet Kuningan, Setiabudi Jakarta Selatan 12940
+                                    </br>
+                                    +6221 37530629
+                                </p>
+                            </div>
+                            <div class="col-md-6">
+                                <h6>Korea Selatan</h6>
+                                <p class="col-xs-12">
+                                    서울특별시 강남구 역삼로17길 60, 3층 316-7호 (역삼동)
+                                    </br>
+                                    +8210 59525 2349
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
         
         <div class="copyrights">
             <div class="container">

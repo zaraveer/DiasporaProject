@@ -7,7 +7,7 @@ header{
     padding: 5px 0px;
 }
 .header-menu{
-	background-color: #16E689;
+	background-color: #5cb85c;
 	height: 50px;
 }
 .header-inner{
@@ -38,7 +38,7 @@ header{
 }
 .item-menu:hover{
 	background: #fff;
-	color: #16E689 !important;
+	color: #5cb85c !important;
 }
 .header-brand{
 	display: inline-block;
@@ -99,12 +99,13 @@ header{
     color: #999;
 }
 .header-block .btn-donasi{
- 	border: solid 3px #16E689;
+ 	border: solid 3px #5cb85c;
     letter-spacing: 3px;
     margin: 11px;
+    color: #5cb85c;
 }
 .header-block .btn-donasi:hover{
-	background: #16E689;
+	background: #5cb85c;
 	color: #fff;
 }
 
@@ -168,8 +169,8 @@ header{
 .banner-item .banner-box .raise{
     width: 50%;
     float: left;
-    border-right: solid 1px #ededed;
-    border-top: solid 1px #ededed;
+    border-right: dashed 1px #ccc;
+    border-top: dashed 1px #ccc;
     padding-top: 20px;
     padding-right: 20px;
     padding-bottom: 20px;
@@ -183,7 +184,7 @@ header{
     margin-bottom: 5px;
 }
 .banner-item .banner-box .raise .value{
-    color: #16E689;
+    color: #5cb85c;
     font-weight: bold;
     font-size: 20px;
 }
@@ -193,7 +194,7 @@ header{
     padding-top: 20px;
     padding-left: 20px;
     padding-bottom: 20px;
-    border-top: solid 1px #ededed;
+    border-top: dashed 1px #ccc;
     margin-top: 20px;
 }
 .banner-item .banner-box .goal .label{
@@ -211,14 +212,71 @@ header{
     float: left;
     width: 100%;
     text-align: center;
-    border-top: solid 1px #ededed;
+    border-top: dashed 1px #ccc;
 }
 .banner-item .banner-box .action .btn{
     margin-top: 20px;
-    background: #16E689;
+    background: #5cb85c;
     padding: 5px 30px;
     border-radius: 3px;
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 3px;
+}
+
+.sd-icon{
+	text-align: center;
+}
+.sd-icon img{
+	padding: 20px;
+    margin: auto;
+    border: dashed 1px #ccc;
+    margin-bottom: 20px;
+}
+.sd-icon:hover img{
+	background-color: #efefef;
+}
+
+#clickbait{
+	background: #5cb85c;
+	color: #fff;
+	font-size: 25px;
+	padding-top: 20px !important;
+}
+#clickbait .btn{
+	color: #fff;
+    font-size: 16px;
+    border: solid 3px #fff;
+    letter-spacing: 2px;
+    padding: 5px 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#clickbait .btn:hover{
+	padding: 5px 40px;
+}
+
+footer{
+	padding: 40px 0px;
+	background: #333;	
+}
+footer ul{
+    list-style: none;
+    padding: 0;
+}
+
+footer a,
+footer h4,
+footer h5,
+footer h6,
+footer p{
+	color: #fff !important;
+}
+footer h5,
+footer h6{
+	margin-bottom: 5px;
+}
+
+.dmtop{
+	background-color: #5cb85c !important;
 }
