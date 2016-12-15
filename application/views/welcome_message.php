@@ -243,119 +243,80 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
 
                 <?php foreach($results as $res): ?>
-                <div class="col-md-4 col-lg-4">
-                    <div class="panel panel-profile grid-view">
-                        <div class="panel-heading">
-                            <div class="text-center">
-                            <h4 class="panel-profile-name">
-                                <?php $s_id = str_pad( $res->id, 8, "0", STR_PAD_LEFT ); ?>
-                                <a href="<?= base_url(''); ?>project/details/<?= $res->slug; ?>/<?= $s_id; ?>">
-                                <?php echo htmlspecialchars($res->name_project,ENT_QUOTES,'UTF-8');?>
-                                </a>
-                            </h4>                         
-                            <i class="glyphicon glyphicon-user"></i>
-                            <?php $p_id = str_pad( $res->id_user, 8, "0", STR_PAD_LEFT ); ?>
-                            oleh <a href="<?= base_url(''); ?>profile/details/<?= $p_id; ?>">
-                                <?php echo htmlspecialchars($res->username,ENT_QUOTES,'UTF-8');?>
-                            </a>
+                <div class="col-md-4">
+                    <?php 
+                        $s_id = str_pad( $res->id, 8, "0", STR_PAD_LEFT );
+                        $p_id = str_pad( $res->id_user, 8, "0", STR_PAD_LEFT );
+                        $str = $res->summary;
+                        eval("\$str = \"$str\";");
+                        
+                        $i = 0;
+                        $terkumpul = 0;
+                        foreach($money as $m){ 
+                            if($res->id_project == $m->id_project){
+                                $i = $i + $m->value;
+                                $terkumpul = $terkumpul + $m->value;
+                            } 
+                        } 
+                        $per = ($i / $res->cost) * 100;
+                        $aa = round($per, 1);
+
+                        $to = explode('/',$res->dateto);
+                        $dateto = $to[2]."-".$to[0]."-".$to[1];
+                        $date=strtotime($dateto);//Converted to a PHP date (a second count)
+                        $diff=$date-time();//time returns current time in seconds
+                        $days=floor($diff/(60*60*24));
+                    ?>
+                    <a href="<?= base_url(''); ?>project/details/<?= $res->slug; ?>/<?= $s_id; ?>" class="project">
+                        <div class="project-image">
+                            <img onError="this.src='<?= base_url('assets/photos')?>/base.png'" src="<?= base_url('assets/photos')?>/<?= $res->projectphoto; ?>"/>
                         </div>
-                      </div>
-                      <div class="imgwel">
-                        <?php if($res->projectphoto == NULL ){ ?>
-                            <img src="<?= base_url(''); ?>assets/images/default-img-placeholder.png" style="width:100%;"/>
-                        <?php }else{ ?>
-                            <img src="<?= base_url(''); ?>assets/photos/<?= $res->projectphoto; ?>"/>
-                        <?php } ?>
-                      </div>
-                      <div class="panel-body people-info">
-                        <div class="info-group">
-                          <label>Kategori</label>
-                          <?php echo htmlspecialchars($res->name_category,ENT_QUOTES,'UTF-8');?>
+                        <div class="project-title">
+                            <?= htmlspecialchars($res->name_project,ENT_QUOTES,'UTF-8')?>
                         </div>
-                        <div class="info-group">
-                          <label>Lokasi</label>
-                          <?php echo htmlspecialchars($res->name_province,ENT_QUOTES,'UTF-8');?>
+                        <div class="project-category">
+                            <i class="glyphicon glyphicon-bookmark"></i> <?= htmlspecialchars($res->name_category,ENT_QUOTES,'UTF-8')?>
                         </div>
-                        <div class="info-group">
-                          <label>Description</label>
-                          <p class="desc"><?php 
-                            $str = $res->summary;
-                            eval("\$str = \"$str\";");
-                            echo $str;
-                          ?></p>                        
+                        <div class="project-location">
+                            <i class="glyphicon glyphicon-map-marker"></i> <?= htmlspecialchars($res->name_province,ENT_QUOTES,'UTF-8')?>
                         </div>
-                        <div class="row">
-                          <div class="col-xs-6">
-                            <div class="info-group">
-                              <label>Biaya</label>
-                              <h4><?php echo htmlspecialchars(number_format($res->cost, 0 , ",", "."),ENT_QUOTES,'UTF-8');?></h4>
+                        <div class="project-desc">
+                            <?= $str ?>
+                        </div>
+                        <div class="project-maker">
+                            <div class="avatar">
+                                <?= substr($res->username, 0, 1)?>
                             </div>
-                          </div>
-                          <div class="col-xs-6">
-                            <div class="info-group">
-                              <label>Sisa Waktu</label>
-                              <h4>
-                                <?php 
-                                    $to = explode('/',$res->dateto);
-                                    $dateto = $to[2]."-".$to[0]."-".$to[1];
-                                    
-                                    $date=strtotime($dateto);//Converted to a PHP date (a second count)
-
-                                    $diff=$date-time();//time returns current time in seconds
-                                    $days=floor($diff/(60*60*24));//seconds/minute*minutes/hour*hours/day);
-                                    
-                                    if($days <= 0){ 
-                                        echo "$days hari";
-                                    }else{
-                                        echo "$days hari";
-                                    }
-                                ?>
-                              </h4>
+                            <div class="name">
+                                oleh : <?= htmlspecialchars($res->username,ENT_QUOTES,'UTF-8');?>
                             </div>
-                          </div>
                         </div>
-
-                        <div class="info-group">
-                          <label>Dana Terkumpul</label>
-                          <p>
-                          <?php 
-                          $i = 0;
-                          foreach($money as $m){ 
-                                    if($res->id_project == $m->id_project){
-                                        $i = $i + $m->value;
-                                    } 
-                                } 
-                                echo htmlspecialchars(number_format($i, 0 , ",", "."),ENT_QUOTES,'UTF-8');
-                                echo " Won";
-                                ?>
-                            </p>
-                        </div>
-
-                        <div class="info-group last">
-                            <?php $i = 0;
-                                foreach($money as $m){ 
-                                    if($res->id_project == $m->id_project){
-                                        $i = $i + $m->value;
-                                    } 
-                                } 
-
-                                $per = ($i / $res->cost) * 100;
-                                $aa = round($per, 1); ?>
-                                
-                            <label>Proses : <?= $aa; ?>%</label>
-                         
-                         <div class="progress progress-striped">
-                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<?= $aa; ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php if($aa > 100) { echo "100"; } else{ echo $aa; }  ?>%">
-                              <span class="sr-only">
-                              <?php if($aa > 32){ echo $aa."% Complete"; } ?></span>
+                        <div class="project-progress">
+                            <div class="terkumpul">
+                                <b>
+                                    ₩<?= htmlspecialchars(number_format($terkumpul, 0 , ",", "."),ENT_QUOTES,'UTF-8');?>
+                                </b> 
+                                terkumpul
                             </div>
-                         </div>
-                          
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<?=$aa?>" aria-valuemin="0" aria-valuemax="100" style="width: <?=$aa > 100 ? 100 : $aa ?>%">
+                                  <span class="sr-only">
+                                  <?php if($aa > 32){ echo $aa."% Complete"; } ?></span>
+                                </div>
+                            </div>
+                            <div class="status">
+                                <div class="pull-left">
+                                    <b><?=$aa?>%</b>
+                                </div>
+                                <div class="pull-right">
+                                    <i class="glyphicon glyphicon-time"></i>
+                                    <b><?=$days?></b> 
+                                    Hari
+                                </div>
+                            </div>
                         </div>
-                    
-                      </div><!-- panel-body -->
-                    </div><!-- panel -->
-                  </div><!-- col-md-6 -->
+                    </a>
+                </div>
                 <?php endforeach; ?>
                 </div>
                     <center>

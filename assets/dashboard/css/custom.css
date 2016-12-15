@@ -280,3 +280,102 @@ footer h6{
 .dmtop{
 	background-color: #5cb85c !important;
 }
+
+.project{
+	width: 100%;
+	background-color: #fff;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	display: block;
+	border: solid 1px #ccc;
+}
+	.project:hover{
+		border: solid 1px #5cb85c;
+	}
+	.project .project-image{
+		width: 100%;
+		height: 200px;
+	    display: inline-flex;
+		background-color: #ccc;
+		border-top-right-radius: 5px;
+		border-top-left-radius: 5px;
+	}
+		.project .project-image img{
+			width: 100%;
+			border-top-right-radius: 5px;
+			border-top-left-radius: 5px;
+			object-fit: cover;
+		}
+	.project .project-title{
+	    padding: 15px;
+	    padding-bottom: 0px;
+	    text-transform: uppercase;
+	    color: #666;
+	    font-weight: bold;
+	    letter-spacing: 1px;
+	}
+	.project .project-category,
+	.project .project-location{
+		padding: 1px 15px;
+		padding-top: 0px;
+		color: #666;
+	}
+	.project .project-category .glyphicon,
+	.project .project-location .glyphicon{
+	    font-size: .8em;
+    	margin-right: 5px;
+	}
+	.project .project-desc{
+		color: #666;
+		padding: 5px 15px;
+		display: block;
+	  	display: -webkit-box;
+	  	max-height: 100px;
+	  	margin: 0 auto;
+  		font-size: 1em;
+	  	line-height: 1.5em;
+	    -webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		letter-spacing: .8px;
+	}
+	.project .project-maker{
+		padding: 15px;
+		display: inline-block;
+	}
+		.project .project-maker .avatar{
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			background-color: #5cb85c;
+			color: #fff;
+			text-transform: uppercase;
+			text-align: center;
+			line-height: 25px;
+			display: inline-block;
+			margin-right: 10px;	
+		}
+		.project .project-maker .name{
+		    display: inline;
+		    width: calc(100% - 35px);
+		    color: #666;
+		}
+	.project .project-progress{
+		padding: 5px 15px;
+	}
+		.project .project-progress .terkumpul{
+			font-size: 1.5em;
+			color: #666;
+			margin-bottom: 5px;
+		}
+		.project .project-progress .progress{
+			margin-bottom: 5px;
+			display: inline-block;
+			width: 100%;
+		}
+		.project .project-progress .status{
+			font-size: 1em;
+			color: #666;
+			margin-bottom: 30px;
+		}
