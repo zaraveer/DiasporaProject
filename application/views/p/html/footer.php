@@ -1,4 +1,49 @@
 </section>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <h4><b>Tentang Kami</b></h4>
+                <ul>
+                    <li><a href="<?= base_url(''); ?>Apaitu">Apa itu Diaspora Project?</a></li>
+                    <li><a href="<?= base_url(''); ?>Carakerja">Cara Kerja</a></li>
+            	</ul>
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <h4><b>Menggalang Dana</b></h4>
+                <ul>
+                    <li><a href="<?=base_url('')?>register">Buat Project</a></li>
+                    <li><a href="<?=base_url('')?>Syaratketentuan">Syarat dan Ketentuan</a></li>
+                    <li><a href="<?=base_url('')?>Kebijakanprivasi">Kebijakan Privasi</a></li>
+                    <!--li><a href="<?=base_url('')?>Dukungan">Dukungan</a></li-->
+                </ul>
+            </div>
+
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <h4><b>Kontak Kami</b> (Yayasan Diaspora Berdaya Bersama)</h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6>Indonesia</h6>
+                        <p class="col-xs-12">
+                            Jl. HR Rasuna Said, Karet Kuningan, Setiabudi Jakarta Selatan 12940
+                            </br>
+                            +6221 37530629
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>Korea Selatan</h6>
+                        <p class="col-xs-12">
+                            서울특별시 강남구 역삼로17길 60, 3층 316-7호 (역삼동)
+                            </br>
+                            +8210 59525 2349
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 
 <script src="<?= base_url('assets/dashboard'); ?>/lib/jquery/jquery.js"></script>
 <script src="<?= base_url('assets/dashboard'); ?>/lib/jquery-ui/jquery-ui.js"></script>
@@ -33,6 +78,10 @@
 $(document).ready(function(){
 
   'use strict';
+
+  	setTimeout(function(){ 
+  		$('#preloader').hide();
+  	}, 1000);
   
 	<?php if($this->router->class == 'profile') { ?>
 		// Basic Form

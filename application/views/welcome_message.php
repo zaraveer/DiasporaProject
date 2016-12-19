@@ -1,78 +1,3 @@
-<!--**This is view for homepage or welcome*-->
-
-<!-- maulida add edit custom css-->
-  <style type="text/css">
-    .thumbnail_at {
-      position: relative;
-      height: 400px;
-      overflow: hidden;
-      }
-    .thumbnail_at img {
-      max-width: 100%;
-      max-height: 100%;
-      margin:auto;
-      display:block;
-    }
-  }
-  </style>
-
-
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?>
-<!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
-
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Diaspora Project</title>
-
-    <!-- Favicons
-    ================================================== -->
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-
-    <!-- Core CSS -->
-    <link href="<?= base_url('assets/css/bootstrap.css'); ?>" rel="stylesheet">
-    <link href="<?= base_url('assets/css/extralayers.css') ?>" rel="stylesheet">
-    <link href="<?= base_url('assets/css/animate.css') ?>" rel="stylesheet">
-    <link href="<?= base_url('assets/css/carousel.css') ?>" rel="stylesheet">
-    <link href="<?= base_url('assets/css/owl-carousel.css') ?>" rel="stylesheet">
-    <link href="<?= base_url('assets/css/et-line.css') ?>" rel="stylesheet">
-    <link href="<?= base_url('assets/css/style.css') ?>" rel="stylesheet">
-	<link href="<?= base_url('assets/css/jquery.modal.css') ?>" rel="stylesheet" type="text/css" media="screen" />
-
-    <!-- Custom CSS -->
-    <link href="<?= base_url('assets/css/custom.css') ?>" rel="stylesheet">
-
-    <!-- PORTFOLIO AND LIGHTBOX SETTINGS -->
-    <link href="<?= base_url('assets/bfassets/css/bootFolio.css') ?>" rel="stylesheet">
-    <link href="<?= base_url('assets/bfassets/css/prettyPhoto.css') ?>" rel="stylesheet">
-
-    <!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
-    <link rel="stylesheet" type="text/css" href="<?= base_url('assets/css/extralayers.css') ?>" media="screen" /> 
-    <link rel="stylesheet" type="text/css" href="<?= base_url('assets/rs-plugin/css/settings.css') ?>" media="screen" />
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
 <body class="agencystyle">
     
     <div id="preloader">
@@ -397,24 +322,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         <div class="dmtop">Scroll to Top</div>
     </div><!-- end wrapper -->
-	
-	<!-- Modal HTML embedded directly into document -->
-	<form action="register" method="post" class="regis_form modal" id="register" style="display:none;">
-	  <h3>Registration</h3>
-	  <p><label>Username:</label><input type="text" name="usernamereg" class="txt" required/></p>
-	  <p><label>Email:</label><input type="text" name="emailreg" class="txt" required/></p>
-	  <p><label>Password:</label><input type="password" name="passwordreg" class="txt" required/></p>
-	  <p><input type="submit" value="Submit" class="sb"/></p>
-	</form>
-	
-	<!-- Modal HTML embedded directly into document -->
-	<div class="forgot_pass modal" id="forgotpassword"  style="display:none;">
-		<form action="auth/forgot_password" method="post">
-		  <h3>Forgot Password</h3>
-		  <p><label>Username:</label><input type="text" name="identity" class="txt" placeholder="Input your username" required/></p>
-		  <p><input type="submit" value="Submit" class="sb"/></p>
-		</form>
-	</div>
     
     <!-- jQuery -->
     <script src="<?= base_url('assets/js/jquery.js') ?>"></script>

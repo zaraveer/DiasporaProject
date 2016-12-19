@@ -77,7 +77,7 @@ h6 {
 }
 
 a {
-    color: #16E689;
+    color: #5cb85c;
     outline: 0;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
@@ -3012,7 +3012,7 @@ figure.effect-milo:hover .image {
 }
 
 .form-control:focus {
-    border-color: #16E689
+    border-color: #5cb85c
 }
 
 .form-control {
