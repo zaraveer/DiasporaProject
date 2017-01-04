@@ -1,10 +1,8 @@
-  <div class="mainpanel">
-
-    <!--<div class="pageheader">
-      <h2><i class="fa fa-home"></i> Dashboard</h2>
-    </div>-->
-
-    <div class="contentpanel">
+    <div class="container">
+    	<div class="section-title text-center dm">
+	        <h3><b>Daftar Donasi</b></h3>
+	        <!-- <p class="lead">Platform Ruang Berkolaborasi Sesama Diaspora</p> -->
+	    </div>
 
       <div class="row profile-wrapper">
         <div class="col-md-12 col-lg-12 dash-left">
@@ -58,12 +56,12 @@
 									  <?php }else{ ?>
 									  <td>
 										<?php if($res->donationstatus == 0){ ?>
-											<a href="<?= base_url(''); ?>donate/status/<?= $res->id_donate; ?>/acc" class="btn btn-primary btn-quirk">Terima</a>
-											<a href="<?= base_url(''); ?>donate/status/<?= $res->id_donate; ?>/dec" class="btn btn-warning btn-quirk">Batalkan</a>
+											<a href="<?= base_url(''); ?>donate/status/<?= $res->id_donate; ?>/acc" class="btn btn-success">Terima</a>
+											<a href="<?= base_url(''); ?>donate/status/<?= $res->id_donate; ?>/dec" class="btn btn-warning">Batalkan</a>
 										<?php }else if($res->donationstatus == 1){ ?>
-											<a href="<?= base_url(''); ?>donate/status/<?= $res->id_donate; ?>/dec" class="btn btn-warning btn-quirk">Batalkan</a>
+											<a href="<?= base_url(''); ?>donate/status/<?= $res->id_donate; ?>/dec" class="btn btn-warning">Batalkan</a>
 										<?php }else if($res->donationstatus == 2){ ?>
-											<a href="<?= base_url(''); ?>donate/status/<?= $res->id_donate; ?>/acc" class="btn btn-primary btn-quirk">Terima</a>
+											<a href="<?= base_url(''); ?>donate/status/<?= $res->id_donate; ?>/acc" class="btn btn-success">Terima</a>
 										<?php } ?>
 									  </td>
 									  <?php } ?>
@@ -159,5 +157,3 @@
       </div><!-- row -->
 
     </div><!-- contentpanel -->
-
-  </div><!-- mainpanel -->

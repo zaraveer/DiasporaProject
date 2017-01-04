@@ -2324,9 +2324,9 @@ a.plus-x:hover {
 .pagination>li>span {
     background-color: #fff;
     border: 1px solid #ddd;
-    color: #16E689!important;
+    color: #5cb85c!important;
     float: left;
-    line-height: 1.42857;
+    line-height: .5;
     margin-left: 9px;
     border-radius: 0!important;
     padding: 15px 22px;
@@ -2339,9 +2339,15 @@ a.plus-x:hover {
 .pagination a:active,
 .pagination a:focus,
 .pagination a:hover,
-.pagination>li>a:hover .pagination>li>span:hover {
-    border-color: #16E689!important;
-    background-color: #16E689!important;
+.pagination>li>a:hover .pagination>li>span:hover,
+.pagination > .active > a, 
+.pagination > .active > span, 
+.pagination > .active > a:hover, 
+.pagination > .active > span:hover, 
+.pagination > .active > a:focus, 
+.pagination > .active > span:focus {
+    border-color: #5cb85c!important;
+    background-color: #5cb85c!important;
     color: #fff!important
 }
 

@@ -1,7 +1,10 @@
 <?php if(!$this->ion_auth->is_admin()){ ?>
-  <div class="mainpanel">
 
-    <div class="contentpanel">
+    <div class="container">
+    	<div class="section-title text-center dm">
+	        <h3><b>Daftar Project</b></h3>
+	        <!-- <p class="lead">Platform Ruang Berkolaborasi Sesama Diaspora</p> -->
+	    </div>
 
       <div class="row profile-wrapper">
         <div class="col-md-12 col-lg-12 dash-left">
@@ -304,12 +307,13 @@
       </div><!-- row -->
 
     </div><!-- contentpanel -->
-
-  </div><!-- mainpanel -->
 <?php }else{ ?>
-  <div class="mainpanel">
 
-    <div class="contentpanel">
+    <div class="container">
+    	<div class="section-title text-center dm">
+	        <h3><b>Daftar Project</b></h3>
+	        <!-- <p class="lead">Platform Ruang Berkolaborasi Sesama Diaspora</p> -->
+	    </div>
 
       <div class="row profile-wrapper">
         <div class="col-md-12 col-lg-12 dash-left">
@@ -362,12 +366,12 @@
 									  <td>
 										<div class="btn-group">
 											<?php if($res->status == 0){ ?>
-												<a href="<?= base_url(''); ?>project/status/<?= $res->id_project; ?>/acc" class="btn btn-primary btn-quirk">Terima</a>
-												<a href="<?= base_url(''); ?>project/status/<?= $res->id_project; ?>/dec" class="btn btn-warning btn-quirk">Batalkan</a>
+												<a href="<?= base_url(''); ?>project/status/<?= $res->id_project; ?>/acc" class="btn btn-success">Terima</a>
+												<a href="<?= base_url(''); ?>project/status/<?= $res->id_project; ?>/dec" class="btn btn-warning">Batalkan</a>
 											<?php }else if($res->status == 1){ ?>
-												<a href="<?= base_url(''); ?>project/status/<?= $res->id_project; ?>/dec" class="btn btn-warning btn-quirk">Batalkan</a>
+												<a href="<?= base_url(''); ?>project/status/<?= $res->id_project; ?>/dec" class="btn btn-warning">Batalkan</a>
 											<?php }else if($res->status == 2){ ?>
-												<a href="<?= base_url(''); ?>project/status/<?= $res->id_project; ?>/acc" class="btn btn-primary btn-quirk">Terima</a>
+												<a href="<?= base_url(''); ?>project/status/<?= $res->id_project; ?>/acc" class="btn btn-success">Terima</a>
 											<?php } ?>
 										</div>
 									  </td>
@@ -385,6 +389,4 @@
       </div><!-- row -->
 
     </div><!-- contentpanel -->
-
-  </div><!-- mainpanel -->
 <?php } ?>

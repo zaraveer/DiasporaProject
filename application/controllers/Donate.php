@@ -29,9 +29,9 @@ class Donate extends CI_Controller {
 			$data['r_barang'] = $this->Project_model->get_donatetables('barang', $userid);
 			$data['r_tenaga'] = $this->Project_model->get_donatetables('tenaga', $userid);
 			
-			$this->load->view('p/html/leftpanel', $data);
+			//$this->load->view('p/html/leftpanel');
 			
-			$this->load->view('p/donate');
+			$this->load->view('p/donate', $data);
 			$this->load->view('p/html/footer');
 		}
 	}
