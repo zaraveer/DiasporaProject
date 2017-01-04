@@ -1,4 +1,4 @@
-/**Maulida edit model untuk database**/
+<!-- /**Maulida edit model untuk database**/ -->
 
 <?php  
 if ( ! defined('BASEPATH')) exit('No direct script access allowed'); 

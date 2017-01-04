@@ -1,4 +1,4 @@
-/*This is for controller project*/
+<!-- /*This is for controller project*/ -->
 
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
