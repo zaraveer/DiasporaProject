@@ -23,12 +23,7 @@ class Dashboard extends CI_Controller {
 			$this->load->view('p/html/header');
 			$userid = $this->session->userdata('user_id');
 			$data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
-			$data['user'] = $this->ion_auth->user($userid)->row();
-
 			$data['money'] = $this->Dashboard_model->get_process();
-
-			$data['photo'] = $this->Profile_model->getphoto($userid);
-
 			$data['num_project'] = $this->Project_model->getcountprojectbyuserid($userid);
 			$data['num_donated_project'] = $this->Project_model->getcountdonatedprojecttablebyuserid($userid);
 			
@@ -46,7 +41,7 @@ class Dashboard extends CI_Controller {
 			};
 			$data['total_donation'] = $i;
 
-			$this->load->view('p/html/leftpanel', $data);
+			//$this->load->view('p/html/leftpanel', $data);
 			$this->load->view('p/userstatistic', $data);
 			$this->load->view('p/html/footer');
 		}

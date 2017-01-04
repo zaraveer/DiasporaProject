@@ -1,3 +1,4 @@
+
 <body>
   <div id="preloader">
     <div id="spinner"></div>
@@ -15,11 +16,22 @@
                 <?php if(!$this->ion_auth->logged_in()){ ?>
                 <a class="item-menu" href="<?= base_url(''); ?>register">Daftar</a>
                 <a class="item-menu" href="<?= base_url(''); ?>login">Masuk</a>
-                <?php } else {?>
-                <a class="item-menu" href="<?= base_url('dashboard') ?>">Dashboard</a>
-                <a class="item-menu" href="<?= base_url('/auth/logout') ?>">Logout</a>
-                <?php } ?>
                 <a class="item-menu" href="<?= base_url(''); ?>project/all"><span class="hidden-xs">Daftar</span> Proyek</a>
+                <?php } else {
+                    $userid = $this->session->userdata('user_id');
+                    $user = $this->ion_auth->user($userid)->row();
+                ?>
+                <a class="item-menu" href="<?= base_url('profile') ?>">
+                    Hai, <?=htmlspecialchars($user->first_name." ".$user->last_name,ENT_QUOTES,'UTF-8');?>
+                </a>
+                <a class="item-menu" href="<?= base_url('dashboard') ?>">Dashboard</a>
+                <a class="item-menu" href="<?= base_url('project') ?>">Proyek</a>
+                <a class="item-menu" href="<?= base_url('donate') ?>">Daftar Donasi</a>
+                <?php  if ($this->ion_auth->is_admin()) { ?>
+                <a class="item-menu" href="<?= base_url('userlist') ?>">Daftar Pengguna</a>
+                <?php } ?>
+                <a class="item-menu" href="<?= base_url('/auth/logout') ?>">Logout</a>
+                <?php } ?>                
             </div>
         </div>
     </div>
