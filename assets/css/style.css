@@ -3874,7 +3874,7 @@ figure.effect-milo:hover .image {
     font-family: Dosis, sans-serif;
     font-weight: 300;
     outline: 0!important;
-    color: #16E689
+    color: #5cb85c;
 }
 
 .btn-group-lg>.btn,
@@ -4009,7 +4009,7 @@ figure.effect-milo:hover .image {
 }
 
 .btn-group .btn-default {
-    padding: 13px
+    padding: 6px 13px
 }
 
 .shop-box {

@@ -417,6 +417,9 @@ label{
 .dm{
 	margin: 3em auto;
 }
+.mb{
+	margin-bottom: : 3em;
+}
 
 .select2-container--default .select2-selection--single{
 	height: 40px !important;
@@ -431,4 +434,14 @@ label{
 }
 .btn-def-size{
 	height: 40px;
+}
+
+label.error{
+	display: none !important;
+}
+
+.tab-content{
+	float: left;
+	margin-bottom: 3em;
+    width: 100%;
 }

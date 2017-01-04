@@ -27,7 +27,7 @@ class Profile extends CI_Controller {
 		$data['id'] = $userid;
 		$data['code'] = $code;
 		$data['photo'] = $this->Profile_model->getphoto($userid);
-		$this->load->view('p/html/leftpanel', $data);
+		//$this->load->view('p/html/leftpanel', $data);
 		$this->load->view('p/profile', $data);
 		$this->load->view('p/html/footer');
 	}

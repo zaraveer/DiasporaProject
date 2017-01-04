@@ -3711,10 +3711,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
-  color: #555;
+  color: #fff;
   cursor: default;
-  background-color: #fff;
-  border: 1px solid #ddd;
+  background-color: #5cb85c;
+  border: 1px solid #5cb85c;
   border-bottom-color: transparent;
 }
 .nav-tabs.nav-justified {
@@ -3832,6 +3832,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .tab-content > .tab-pane {
   display: none;
   visibility: hidden;
+  background-color: #fff;
 }
 .tab-content > .active {
   display: block;
