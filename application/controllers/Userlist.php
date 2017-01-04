@@ -32,9 +32,9 @@ class Userlist extends CI_Controller {
 
 			$data['r_users'] = $this->User_model->get_usertables();
 			
-			$this->load->view('p/html/leftpanel', $data);
+			//$this->load->view('p/html/leftpanel');
 			
-			$this->load->view('p/userlist');
+			$this->load->view('p/userlist', $data);
 			$this->load->view('p/html/footer');
 		}
 	}

@@ -23,7 +23,7 @@
 						  <div class="col-sm-12 col-md-12 col-lg-12 people-list">
 
 							<div class="people-options clearfix" style="margin-bottom: 20px;">
-							  <div class="btn-toolbar pull-left">
+							  <div class="btn-toolbar col-md-12">
 								<a href="<?= base_url(''); ?>project/form" class="btn btn-success btn-quirk">Buat Proyek Baru</a>
 							  </div>
 
@@ -167,7 +167,7 @@
 						  <div class="col-sm-12 col-md-12 col-lg-12 people-list">
 
 							<div class="people-options clearfix" style="margin-bottom: 20px;">
-							  <div class="btn-toolbar pull-left">
+							  <div class="btn-toolbar col-md-12">
 								<a href="<?= base_url(''); ?>project/add" class="btn btn-success btn-quirk">Buat Proyek Baru</a>
 							  </div>
 

@@ -1,11 +1,9 @@
 
-  <div class="mainpanel">
-
-    <!--<div class="pageheader">
-      <h2><i class="fa fa-home"></i> Dashboard</h2>
-    </div>-->
-
-    <div class="contentpanel">
+      <div class="container">
+      	<div class="section-title text-center dm">
+	        <h3><b>Daftar Pengguna</b></h3>
+	        <!-- <p class="lead">Platform Ruang Berkolaborasi Sesama Diaspora</p> -->
+	    </div>
 
       <div class="row profile-wrapper">
         <div class="col-md-12 col-lg-12 dash-left">
@@ -62,7 +60,7 @@
 									  <td><?php echo $res->phone ?></td>
 									  <td>
 									  <?php if($res->active == 0){ ?>
-											<a href="<?= base_url(''); ?>userlist/status/<?= $res->id; ?>/acc" class="btn btn-primary btn-quirk">Aktivasi</a>
+											<a href="<?= base_url(''); ?>userlist/status/<?= $res->id; ?>/acc" class="btn btn-success">Aktivasi</a>
 										<?php }else { ?>
 										<?php echo 'Telah Aktif';?>
 										<?php } ?>
@@ -159,5 +157,3 @@
       </div><!-- row -->
 
     </div><!-- contentpanel -->
-
-  </div><!-- mainpanel -->
