@@ -95,13 +95,13 @@ a:hover {
 ::-moz-selection {
     color: #fff;
     text-shadow: none;
-    background: #16E689
+    background: #5cb85c
 }
 
 ::selection {
     color: #fff;
     text-shadow: none;
-    background: #16E689
+    background: #5cb85c
 }
 
 .lead {
@@ -3231,7 +3231,7 @@ figure.effect-milo:hover .image {
     top: -3px;
     height: 100%;
     width: 100%;
-    border-top: 3px solid rgba(22, 230, 137, 1);
+    border-top: 3px solid #5cb85c;
     border-left: 3px solid transparent;
     border-bottom: 3px solid transparent;
     border-right: 3px solid transparent;
