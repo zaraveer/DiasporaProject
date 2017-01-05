@@ -12,15 +12,23 @@
                 <a class="item-menu hidden-xs" href="#"><i class="fa fa-twitter"></i></a>
                 <a class="item-menu" href="#"><i class="fa fa-search"></i></a>
             </div>
+            
+            <?php if(!$this->ion_auth->logged_in()){ ?>
             <div class="right-menu">
-                <?php if(!$this->ion_auth->logged_in()){ ?>
                 <a class="item-menu" href="<?= base_url(''); ?>register">Daftar</a>
                 <a class="item-menu" href="<?= base_url(''); ?>login">Masuk</a>
                 <a class="item-menu" href="<?= base_url(''); ?>project/all"><span class="hidden-xs">Daftar</span> Proyek</a>
-                <?php } else {
-                    $userid = $this->session->userdata('user_id');
-                    $user = $this->ion_auth->user($userid)->row();
-                ?>
+            </div>
+            <?php } else {
+                $userid = $this->session->userdata('user_id');
+                $user = $this->ion_auth->user($userid)->row();
+            ?>
+            <div class="pull-right">
+                <div class="btn btn-success btn-toggle">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </div>
+            <div class="right-menu admin sembunyi">
                 <a class="item-menu" href="<?= base_url('profile') ?>">
                     Hai, <?=htmlspecialchars($user->first_name." ".$user->last_name,ENT_QUOTES,'UTF-8');?>
                 </a>
@@ -30,9 +38,9 @@
                 <?php  if ($this->ion_auth->is_admin()) { ?>
                 <a class="item-menu" href="<?= base_url('userlist') ?>">Daftar Pengguna</a>
                 <?php } ?>
-                <a class="item-menu" href="<?= base_url('/auth/logout') ?>">Logout</a>
-                <?php } ?>                
+                <a class="item-menu" href="<?= base_url('/auth/logout') ?>">Logout</a>         
             </div>
+            <?php } ?>   
         </div>
     </div>
     <div class="header-help">

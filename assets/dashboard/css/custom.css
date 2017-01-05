@@ -450,3 +450,28 @@ th{
 	background-color: #5cb85c;
 	color: #fff;
 }
+
+.btn-toggle{
+	margin: 8px 0px;
+	display: none;
+}
+@media screen and (max-width: 768px){
+	.btn-toggle{
+		display: block;
+	}
+	.admin{
+		width: 50%;
+	    position: absolute;
+	    background-color: #4cae4c;
+	    top: 49px;
+	    right: 0px;
+	    z-index: 2;
+	}
+	.sembunyi{
+		display: none;
+	}
+	.admin a{
+		width: 100%;
+		border-top: solid 1px #5cb85c;
+	}
+}

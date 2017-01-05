@@ -82,6 +82,20 @@ $(document).ready(function(){
   	setTimeout(function(){ 
   		$('#preloader').hide();
   	}, 1000);
+
+  	$('.btn-toggle').click(function(){
+  		var admin = $('.admin');
+  		if(admin.hasClass('sembunyi')){
+  			admin.slideDown(function(){
+  				admin.removeClass('sembunyi');
+  			});
+  		}
+  		else{
+  			admin.slideUp(function(){
+  				admin.addClass('sembunyi');
+  			});
+  		}
+  	});
   
 	<?php if($this->router->class == 'profile') { ?>
 		// Basic Form
