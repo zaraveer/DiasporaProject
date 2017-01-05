@@ -475,3 +475,45 @@ th{
 		border-top: solid 1px #5cb85c;
 	}
 }
+
+.wizard .content{
+	background: #fff;
+}
+.wizard > .actions a, 
+.wizard > .actions a:hover, 
+.wizard > .actions a:active,
+.wizard > .steps .current a, 
+.wizard > .steps .current a:hover, 
+.wizard > .steps .current a:active{
+	background: #5cb85c;
+}
+.wizard > .steps .done a, 
+.wizard > .steps .done a:hover, 
+.wizard > .steps .done a:active{
+	background: #acd8ac;
+}
+.wizard > .content > .body{
+	position: relative;
+	width: 100%;
+}
+.wizard > .content > .body ul > li{
+	display: inline-block;
+}
+.note-editor .btn-toolbar{
+	margin: 0px;
+}
+.note-editor .modal-body{
+	padding: 30px;
+}
+.note-editor .modal-footer .btn-primary{
+	border: solid 1px #4cae4c;
+	background-color: #5cb85c;
+}
+.tooltip .tooltip-inner{
+	color: #999 !important;
+	padding: 5px 10px;
+	margin: 0;
+	border: solid 1px #999;
+}
+
+

@@ -1,11 +1,11 @@
-
-  <div class="mainpanel">
-
-
-    <div class="contentpanel">
+    <div class="container">
+    	<div class="section-title text-center dm">
+	        <h3><b>New Project</b></h3>
+	        <!-- <p class="lead">Platform Ruang Berkolaborasi Sesama Diaspora</p> -->
+	    </div>
 		
 		<?php if(!empty($user->first_name) || !empty($user->last_name) || !empty($user->dob) || !empty($user->gender) || !empty($user->address) || !empty($user->country) || !empty($user->province) || !empty($user->city)){ ?>
-      <div class="row profile-wrapper">
+      <div class="row profile-wrapper dm">
         
 					<form id="wizard-basic2" class="wizard-style2 form-horizontal" method="post" enctype="multipart/form-data" action="<?php echo site_url('project/submit'); ?>" onsubmit="return postForm()">
 						<input type="hidden" name="action" value="<?php echo $action;?>" required />
@@ -163,5 +163,3 @@
 			</div>
 		<?php } ?>
     </div><!-- contentpanel -->
-
-  </div><!-- mainpanel -->
