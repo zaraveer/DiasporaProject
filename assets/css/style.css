@@ -3133,7 +3133,9 @@ figure.effect-milo:hover .image {
 }
 
 .tab-content>.tab-pane {
-    padding: 20px 0
+    padding: 20px 0;
+    width: 100%;
+    float: left;
 }
 
 .nav-tabs>li.active>a,

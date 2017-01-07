@@ -417,10 +417,15 @@ label{
 .dm{
 	margin: 3em auto;
 }
-.mb{
-	margin-bottom: : 3em;
+.mt{
+	margin-top: 3em;
 }
-
+.mb{
+	margin-bottom: 3em;
+}
+.mb-1{
+	margin-bottom: 1em;
+}
 .select2-container--default .select2-selection--single{
 	height: 40px !important;
 	border: 1px solid #e8e8e8 !important;
@@ -449,6 +454,7 @@ label.error{
 th{
 	background-color: #5cb85c;
 	color: #fff;
+	text-align: center;
 }
 
 .btn-toggle{
@@ -515,5 +521,16 @@ th{
 	margin: 0;
 	border: solid 1px #999;
 }
-
+.btn-facebook{
+	background-color: #2980b9;
+	color: #fff;
+}
+.btn-twitter{
+	background-color: #3cF;
+	color: #fff;
+}
+.btn-google{
+	background-color: #e74c3c;
+	color: #fff;
+}
 
