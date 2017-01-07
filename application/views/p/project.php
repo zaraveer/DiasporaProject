@@ -348,22 +348,22 @@
 								  <tbody>
 									<?php foreach($results as $res): ?>
 									<tr>
-									  <td>
+									  <td >
 										<?php $s_id = str_pad( $res->id, 8, "0", STR_PAD_LEFT ); ?>
 										<a href="<?= base_url(''); ?>project/details/<?= $res->slug; ?>/<?= $s_id; ?>">
 											<?php echo htmlspecialchars($res->name_project,ENT_QUOTES,'UTF-8');?>
 										</a>
 									  </td>
-									  <td>
+									  <td class="text-center">
 										<?php $p_id = str_pad( $res->id_user, 8, "0", STR_PAD_LEFT ); ?>
 										<a href="<?= base_url(''); ?>profile/details/<?= $p_id; ?>">
 											<?php echo htmlspecialchars($res->username,ENT_QUOTES,'UTF-8');?>
 										</a>
 									  </td>
-									  <td><?php echo htmlspecialchars($res->name_category,ENT_QUOTES,'UTF-8');?></td>
-									  <td><?php echo htmlspecialchars($res->cost,ENT_QUOTES,'UTF-8');?></td>
-									  <td><?php echo htmlspecialchars($res->name_province,ENT_QUOTES,'UTF-8');?></td>
-									  <td>
+									  <td class="text-center"><?php echo htmlspecialchars($res->name_category,ENT_QUOTES,'UTF-8');?></td>
+									  <td class="text-right"><?=number_format($res->cost,0,',','.');?></td>
+									  <td class="text-center"><?php echo htmlspecialchars($res->name_province,ENT_QUOTES,'UTF-8');?></td>
+									  <td class="text-center">
 										<div class="btn-group">
 											<?php if($res->status == 0){ ?>
 												<a href="<?= base_url(''); ?>project/status/<?= $res->id_project; ?>/acc" class="btn btn-success">Terima</a>

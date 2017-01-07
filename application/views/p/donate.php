@@ -42,19 +42,21 @@
 								  <tbody>
 									<?php $i = 1; foreach($r_uang as $res): ?>
 									<tr>
-									  <td><?php echo $i++; ?></td>
-									  <td><?php echo $res->dateadded ?></td>
-									  <td><?php echo $res->name_project ?></td>
-									  <td><?php echo $res->value ?></td>
-									  <td><?php echo $res->username ?></td>
-									  <td><?php echo $res->atasnama ?></td>
-									  <td><?php echo $res->bank ?></td>
+									  	<td class="text-center"><?php echo $i++; ?></td>
+									  	<td class="text-center" data-order="<?=implode('/',array_reverse(explode('/',$res->dateadded)))?>">
+									  		<?php echo $res->dateadded ?>
+								  		</td>
+								  		<td><?php echo $res->name_project ?></td>
+									  	<td class="text-right"><?=number_format($res->value,0, ',', '.') ?></td>
+									  	<td class="text-center"><?php echo $res->username ?></td>
+									  	<td class="text-center"><?php echo $res->atasnama ?></td>
+									  	<td class="text-center"><?php echo $res->bank ?></td>
 									  <?php if(!$this->ion_auth->is_admin()){ ?>
-									  <td>
-										<?php if($res->donationstatus == "0"){ echo "Pending"; }else{ echo "Approved"; } ?>
-									  </td>
+									  	<td class="text-center">
+											<?php if($res->donationstatus == "0"){ echo "Pending"; }else{ echo "Approved"; } ?>
+									  	</td>
 									  <?php }else{ ?>
-									  <td>
+									  	<td class="text-center">
 										<?php if($res->donationstatus == 0){ ?>
 											<a href="<?= base_url(''); ?>donate/status/<?= $res->id_donate; ?>/acc" class="btn btn-success">Terima</a>
 											<a href="<?= base_url(''); ?>donate/status/<?= $res->id_donate; ?>/dec" class="btn btn-warning">Batalkan</a>
@@ -63,7 +65,7 @@
 										<?php }else if($res->donationstatus == 2){ ?>
 											<a href="<?= base_url(''); ?>donate/status/<?= $res->id_donate; ?>/acc" class="btn btn-success">Terima</a>
 										<?php } ?>
-									  </td>
+									  	</td>
 									  <?php } ?>
 									</tr>
 									<?php endforeach; ?>
@@ -99,8 +101,8 @@
 								  <tbody>
 									<?php $i = 1; foreach($r_barang as $res): ?>
 									<tr>
-									  <td><?php echo $i++; ?></td>
-									  <td><?php echo $res->dateadded?></td>
+									  <td class="text-center"><?php echo $i++; ?></td>
+									  <td class="text-center" data-order="<?=implode('/',array_reverse(explode('/',$res->dateadded)))?>"><?php echo $res->dateadded?></td>
 									  <td><?php echo $res->name_project?></td>
 									  <td><?php echo $res->value?></td>
 									</tr>
@@ -137,8 +139,8 @@
 								  <tbody>
 									<?php $i = 1; foreach($r_tenaga as $res): ?>
 									<tr>
-									  <td><?php echo $i++; ?></td>
-									  <td><?php echo $res->dateadded?></td>
+									  <td class="text-center"><?php echo $i++; ?></td>
+									  <td class="text-center" data-order="<?=implode('/',array_reverse(explode('/',$res->dateadded)))?>"><?php echo $res->dateadded?></td>
 									  <td><?php echo $res->name_project?></td>
 									  <td><?php echo $res->value?></td>
 									</tr>

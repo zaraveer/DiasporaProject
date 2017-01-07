@@ -54,11 +54,11 @@
 								  <tbody>
 									<?php $i = 1; foreach($r_users as $res): ?>
 									<tr>
-									  <td><?php echo $i++; ?></td>
+									  <td class="text-center"><?php echo $i++; ?></td>
 									  <td><?php echo $res->username ?></td>
 									  <td><?php echo $res->first_name ." " .$res->last_name ?></td>
-									  <td><?php echo $res->phone ?></td>
-									  <td>
+									  <td class="text-center"><?php echo $res->phone ?></td>
+									  <td class="text-center">
 									  <?php if($res->active == 0){ ?>
 											<a href="<?= base_url(''); ?>userlist/status/<?= $res->id; ?>/acc" class="btn btn-success">Aktivasi</a>
 										<?php }else { ?>
@@ -99,8 +99,8 @@
 								  <tbody>
 									<?php $i = 1; foreach($r_barang as $res): ?>
 									<tr>
-									  <td><?php echo $i++; ?></td>
-									  <td><?php echo $res->dateadded?></td>
+									  <td class="text-center"><?php echo $i++; ?></td>
+									  <td class="text-center" data-order="<?=implode('/',array_reverse(explode('/',$res->dateadded)))?>"><?php echo $res->dateadded?></td>
 									  <td><?php echo $res->name_project?></td>
 									  <td><?php echo $res->value?></td>
 									</tr>
