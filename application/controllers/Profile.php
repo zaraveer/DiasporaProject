@@ -44,7 +44,7 @@ class Profile extends CI_Controller {
 			$data['user'] = $this->ion_auth->user($userid)->row();
 			$data['photo'] = $this->Profile_model->getphoto($userid);
 			
-			$this->load->view('p/html/leftpanel', $data);
+			//$this->load->view('p/html/leftpanel', $data);
 			
 			$data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
 			$data['duser'] = $this->Profile_model->getprofile($id);
