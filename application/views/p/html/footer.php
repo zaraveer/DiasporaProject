@@ -1,4 +1,18 @@
 </section>
+<section id="clickbait" class="section-w clearfix">
+    <div class="container">
+        <div class="col-lg-10">
+            Buat project Anda sekarang juga dan berkolaborasi dengan sahabat diaspora lainnya.
+        </div>
+        <div class="col-lg-2">
+            <?php if(!$this->ion_auth->logged_in()){ ?>
+            <a href="<?= base_url(''); ?>register" class="btn">Mulai Proyek</a>
+            <?php } else { ?>
+            <a href="<?= base_url(''); ?>project/form" class="btn">Mulai Proyek</a>
+            <?php } ?>
+        </div>
+    </div>
+</section>
 <footer>
     <div class="container">
         <div class="row">

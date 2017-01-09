@@ -29,15 +29,17 @@
                 </div>
             </div>
             <div class="right-menu admin sembunyi">
-                <a class="item-menu" href="<?= base_url('profile') ?>">
-                    Hai, <?=htmlspecialchars($user->first_name." ".$user->last_name,ENT_QUOTES,'UTF-8');?>
-                </a>
                 <a class="item-menu" href="<?= base_url('dashboard') ?>">Dashboard</a>
-                <a class="item-menu" href="<?= base_url('project') ?>">Proyek</a>
+                <a class="item-menu" href="<?= base_url('project') ?>">Proyek Saya</a>
+                <a class="item-menu" href="<?= base_url('project/all') ?>">Daftar Proyek</a>
                 <a class="item-menu" href="<?= base_url('donate') ?>">Daftar Donasi</a>
                 <?php  if ($this->ion_auth->is_admin()) { ?>
                 <a class="item-menu" href="<?= base_url('userlist') ?>">Daftar Pengguna</a>
                 <?php } ?>
+                <a class="item-menu" href="<?= base_url('profile') ?>">
+                    <!-- Hai, <?=htmlspecialchars($user->first_name." ".$user->last_name,ENT_QUOTES,'UTF-8');?> -->
+                    Profil
+                </a>
                 <a class="item-menu" href="<?= base_url('/auth/logout') ?>">Logout</a>         
             </div>
             <?php } ?>   

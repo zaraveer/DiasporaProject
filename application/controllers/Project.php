@@ -78,7 +78,7 @@ class Project extends CI_Controller {
 		$data['id'] = $userid;
 		$data['user'] = $this->ion_auth->user($userid)->row();
 		$data['photo'] = $this->Profile_model->getphoto($userid);
-		$this->load->view('p/html/leftpanel', $data);
+		//$this->load->view('p/html/leftpanel', $data);
 
 		$data['action'] = 'insert';
 		
@@ -113,7 +113,7 @@ class Project extends CI_Controller {
 			$data['photo'] = $this->Profile_model->getphoto($userid);
 			
 			$data['dproject'] = $this->Project_model->getproject($idproject);
-			$this->load->view('p/html/leftpanel', $data);
+			//$this->load->view('p/html/leftpanel', $data);
 			
 			$data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
 			
@@ -122,7 +122,7 @@ class Project extends CI_Controller {
 			$this->load->view('p/projectdonate', $data);
 			$this->load->view('p/html/footer');
 		}else{
-			redirect('/', 'refresh');
+			redirect('/login', 'refresh');
 		}
 	}
 	
@@ -283,7 +283,7 @@ class Project extends CI_Controller {
 			$data['user'] = $this->ion_auth->user($userid)->row();
 			$data['photo'] = $this->Profile_model->getphoto($userid);
 			
-			$this->load->view('p/html/leftpanel', $data);
+			//$this->load->view('p/html/leftpanel', $data);
 
 			$data['r_uang'] = $this->Project_model->get_updated_donatetables_by_project_id('uang', $data['dproject']->id_project);
 			$data['r_barang'] = $this->Project_model->get_donatetables_by_project_id('barang', $data['dproject']->id_project);

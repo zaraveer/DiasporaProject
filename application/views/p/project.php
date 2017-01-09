@@ -325,6 +325,8 @@
 								<table id="dataTable1" class="table table-bordered table-striped-col">
 								  <thead>
 									<tr>
+										<th>No</th>
+										<th>Tanggal</th>
 									  <th>Nama Proyek</th>
 									  <th>Pemilik</th>
 									  <th>Kategori</th>
@@ -336,6 +338,8 @@
 
 								  <tfoot>
 									<tr>
+										<th>No</th>
+										<th>Tanggal</th>
 									  <th>Nama Proyek</th>
 									  <th>Pemilik</th>
 									  <th>Kategori</th>
@@ -346,8 +350,10 @@
 								  </tfoot>
 
 								  <tbody>
-									<?php foreach($results as $res): ?>
+									<?php foreach($results as $key => $res): ?>
 									<tr>
+										<td class="text-center"><?=$key+1?></td>
+										<td class="text-center" data-order="<?=implode('/',array_reverse(explode("/", $res->projectadded)))?>"><?=$res->projectadded?></td>
 									  <td >
 										<?php $s_id = str_pad( $res->id, 8, "0", STR_PAD_LEFT ); ?>
 										<a href="<?= base_url(''); ?>project/details/<?= $res->slug; ?>/<?= $s_id; ?>">
