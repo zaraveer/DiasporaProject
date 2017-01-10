@@ -231,7 +231,7 @@ class Project_model extends CI_Model {
 		$arr = $this->db->query('SELECT donate.id_donate, donate.dateadded, donate.value, project.name_project, donate_money.bank, donate_money.atasnama, users.username, donate.donationstatus, donate.donatetype
 				FROM donate LEFT JOIN project ON donate.id_project = project.id_project 
 				LEFT JOIN donate_money ON donate.id_donate = donate_money.id_donate 
-				LEFT JOIN users ON users.id = donate.id_user' .' WHERE donate.donatetype="'.$type.'"'.' AND '.'donate.id_project="'.$id.'"');
+				LEFT JOIN users ON users.id = donate.id_user' .' WHERE donate.donatetype="'.$type.'"'.' AND '.'donate.id_project="'.$id.'"'.' AND '.'donate.donationstatus="1"');
  
         return $arr->result();
     }
