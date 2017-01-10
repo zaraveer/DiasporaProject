@@ -13,7 +13,7 @@
 						<i class="fa fa-map-marker"></i> <?=htmlspecialchars($duser->address." ".$duser->name_city." ".$duser->name_province,ENT_QUOTES,'UTF-8'); ?>
 					</span>
 					<div class="col-xs-12 dm">
-						<?=htmlspecialchars($duser->aboutme,ENT_QUOTES,'UTF-8'); ?>
+						<?=html_entity_decode($duser->aboutme,ENT_QUOTES,'UTF-8'); ?>
 					</div>
 				</div>
 			</div>
