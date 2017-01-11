@@ -173,16 +173,30 @@
                     </div>
                 </div>
                 <div class="row mt">
+                <?php if($this->ion_auth->logged_in()) { ?>
                     <div class="col-md-12">
-                        <a target="_blank" href="<?= base_url(''); ?>project/donate/<?= $dproject->id_project; ?>/join" class="btn btn-block btn-success mb-1">
+                        <a href="<?= base_url(''); ?>project/donate/<?= $dproject->id_project; ?>/join" class="btn btn-block btn-success mb-1">
                             Bergabung
                         </a>
                     </div>
                     <div class="col-md-12">
-                        <a target="_blank" href="<?= base_url(''); ?>project/donate/<?= $dproject->id_project; ?>/donate" class="btn btn-block btn-success">
+                        <a href="<?= base_url(''); ?>project/donate/<?= $dproject->id_project; ?>/donate" class="btn btn-block btn-success">
                             Donasi
                         </a>
                     </div>
+
+                    <?php } else { ?>
+                    <div class="col-md-12">
+                        <a href="<?= base_url(''); ?>login" class="btn btn-block btn-success mb-1">
+                            Bergabung
+                        </a>
+                    </div>
+                    <div class="col-md-12">
+                        <a  href="<?= base_url(''); ?>login" class="btn btn-block btn-success">
+                            Donasi
+                        </a>
+                    </div>
+                <?php } ?>
                 </div>
             </div>
         </div>
